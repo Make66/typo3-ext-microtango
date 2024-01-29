@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+  <f:section name="HeaderAssets">
+    <script
+      src="https://cdn.microtango.de/scripts/mtrest-3.0.0.min.js"
+    ></script>
+  </f:section>
+
+  <script>
+    MicrotangoCMSHelper.add({
+        "restKey": "<f:format.raw>{backendConfiguration.restkey}</f:format.raw>",
+        "attendURL": "<f:format.raw>{attendurl}</f:format.raw>",
+        "useMTAttendForm": "<f:format.raw>{attendform}</f:format.raw>",
+        "attendText": "<f:format.raw>{backendConfiguration.attendtext}</f:format.raw>",
+        "courseNotFoundText": "<f:format.raw>{backendConfiguration.coursenotfoundtext}</f:format.raw>",
+        "pleaseWaitText": "<f:format.raw>{backendConfiguration.pleasewaittext}</f:format.raw>",
+        "fullyBookedText": "<f:format.raw>{backendConfiguration.fullybookedtext}</f:format.raw>",
+        "nearlyBookedText": "<f:format.raw>{backendConfiguration.nearlybookedtext}</f:format.raw>",
+        "templates": { "id": "<f:format.raw>{templateid}</f:format.raw>", "columns": [<f:format.raw>{columns}</f:format.raw>] },
+        "update": [{ "action": "course", "category": "<f:format.raw>{category}</f:format.raw>", "webCategory": "<f:format.raw>{webcategory}</f:format.raw>", "orderBy": "<f:format.raw>{orderby}</f:format.raw>", "templateId": "<f:format.raw>{templateid}</f:format.raw>" }],
+        "loadCSS": {f:if(condition: '{{backendConfiguration.loadcss} == 1', then: 'true', else: 'false')},
+        "loadTemplate": {f:if(condition: '{{backendConfiguration.loadtemplate} == 1', then: 'true', else: 'false')},
+    });
+  </script>
+</html>

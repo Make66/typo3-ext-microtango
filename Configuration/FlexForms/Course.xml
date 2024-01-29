@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.webCategory>
+                        <TCEforms>
+                            <label>Web-Kategorie</label>
+                            <description>Geben Sie die anzuzeigende Web-Kategorie an (Leer bedeutet, es werden alle Kurse angezeigt).</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>DMS\Microtango\Utility\FlexFormUtility->getWebCategories</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.webCategory>
+
+                    <settings.orderBy>
+                        <TCEforms>
+                            <label>Sortierung</label>
+                            <description>Sortierung der Kursliste.</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>DMS\Microtango\Utility\FlexFormUtility->getSortFields</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.orderBy>
+
+                    <settings.templateType>
+                        <TCEforms>
+                            <label>Template</label>
+                            <description>Wählen den Template-Typen aus.</description>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>DMS\Microtango\Utility\FlexFormUtility->getCourseTemplateTypes</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.templateType>
+
+                    <settings.rowTemplate>
+                        <TCEforms>
+                            <label>Zeilen-Template</label>
+                            <description>z.B.: Kurs|{{Subject}}#Start|{{ScheduleInfo}} {{StartDateText}}#Von|{{Timespan}} Uhr#Stunden|{{RepeatCount}}#|{{AttendButton}}. Hier gibt es die möglichen Werte: https://api.microtango.de/swagger</description>
+                            <config>
+                                <type>input</type>
+                                <size>50</size>
+                            </config>
+                            <displayCond>FIELD:settings.templateType:=:individual</displayCond>
+                        </TCEforms>
+                    </settings.rowTemplate>
+
+                    <settings.templateId>
+                        <TCEforms>
+                            <label>Template-ID</label>
+                            <description>Geben Sie die ID eines Templates an. Entsprechende Templates liefert z.B. DMS.</description>
+                            <config>
+                                <type>input</type>
+                            </config>
+                            <displayCond>FIELD:settings.templateType:=:id</displayCond>
+                        </TCEforms>
+                    </settings.templateId>
+
+                    <settings.category>
+                        <TCEforms>
+                            <label>Kategorie</label>
+                            <description>Geben Sie die anzuzeigende Kategorie an (Leer bedeutet, es werden alle Kurse angezeigt).</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>DMS\Microtango\Utility\FlexFormUtility->getCategories</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.category>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

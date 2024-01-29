@@ -1,0 +1,33 @@
+{
+    "name": "dms/microtango",
+    "type": "typo3-cms-extension",
+    "description": "Microtango Typo3 integration. Requires subscription from DMS. Will include the Microtango REST API to show your cloud data.",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "authors": [
+        {
+            "name": "Microtango",
+            "role": "Developer",
+            "email": "info@microtango.de",
+            "homepage": "microtango.de"
+        }
+    ],
+    "keywords": [
+        "Microtango"
+    ],
+    "autoload": {
+        "psr-4": {
+            "DMS\\Microtango\\": "Classes/"
+        }
+    },
+    "require": {
+        "typo3/cms-core": ">=10.0 <12.0.0"
+    },
+    "extra": {
+       "typo3/cms": {
+          "extension-key": "microtango"
+       }
+    }
+
+}

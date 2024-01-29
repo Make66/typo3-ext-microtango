@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+  
+<f:section name="HeaderAssets">
+    <script src="https://cdn.microtango.de/scripts/mtrest-3.0.0.min.js"></script>
+</f:section>
+
+  <script>
+    MicrotangoCMSHelper.addVideo({
+        "restKey": "<f:format.raw>{backendConfiguration.restkey}</f:format.raw>",
+        "showVideoText": "<f:format.raw>{backendConfiguration.showvideotext}</f:format.raw>",
+        "videoNotFoundText": "<f:format.raw>{backendConfiguration.videonotfoundtext}</f:format.raw>",
+        "loginText": "<f:format.raw>{backendConfiguration.logintext}</f:format.raw>",
+        "templates": { "id": "<f:format.raw>{templateid}</f:format.raw>", "columns": [<f:format.raw>{columns}</f:format.raw>] },
+        "loadCSS": {f:if(condition: '{{backendConfiguration.loadcss} == 1', then: 'true', else: 'false')},
+        "update": [{ "videoGroup": "<f:format.raw>{videogroup}</f:format.raw>", "templateId": "<f:format.raw>{templateid}</f:format.raw>" }],
+    });
+  </script>
+</html>

@@ -1,0 +1,46 @@
+# cat=Einstellungen; type=string; label=REST-Key: Bei DMS anfordern
+restkey =
+# cat=Einstellungen; type=boolean; label=CSS laden: Lädt kundenspezifische Styles
+loadcss =
+# cat=Einstellungen; type=boolean; label=Templates laden: Lädt kundenspezifische Templates
+loadtemplate =
+# cat=Erweitert; type=string; label=Standard Kurs-Template: z.B.: Kurs|{{Subject}}#Start|{{ScheduleInfo}} {{StartDateText}}#Von|{{Timespan}} Uhr#Stunden|{{RepeatCount}}#|{{AttendButton}}. Hier gibt es die möglichen Werte: https://api.microtango.de/swagger
+defaultrowtemplate =
+# cat=Erweitert; type=string; label=Standard Video-Template: z.B.: |{{VideoThumbnail}}#Name|{{Name}}#Beschreibung|{{Description}}#Länge|{{Length}}#|{{ShowVideo}}. Hier gibt es die möglichen Werte: https://api.microtango.de/swagger
+defaultvideorowtemplate =
+# cat=Erweitert; type=string; label=Text "Bitte warten": Standard: Lade...
+pleasewaittext =
+# cat=Erweitert; type=string; label=Text "Kein Kurs gefunde": Standard: <h3>Keine aktuellen Kurse vorhanden</h3>
+coursenotfoundtext =
+# cat=Erweitert; type=string; label=Text "Anmelden": Standard: Anmelden
+attendtext =
+# cat=Erweitert; type=string; label=Text "Kurs ist fast ausgebucht": Standard: Wenig Plätze
+nearlybookedtext =
+# cat=Erweitert; type=string; label=Text "Kurs ist ausgebucht": Standard: Ausgebucht
+fullybookedtext =
+# cat=Erweitert; type=string; label=Text "Reservierungen": Standard: Meine Reservierungen
+reservationtext =
+# cat=Erweitert; type=string; label=Text "Einloggen": Standard Einloggen
+logintext =
+# cat=Erweitert; type=string; label=Text "Kein Video gefunden": Standard: <h3>Keine Videos vorhanden</h3>
+videonotfoundtext =
+# cat=Erweitert; type=string; label=Text "Video anzeigen": Standard: Abspielen
+showvideotext =
+# cat=Templates; type=string; label=Kurs-Template 1
+courserowtemplate1 =
+# cat=Templates; type=string; label=Kurs-Template 2
+courserowtemplate2 =
+# cat=Templates; type=string; label=Kurs-Template 3
+courserowtemplate3 =
+# cat=Templates; type=string; label=Kurs-Template 4
+courserowtemplate4 =
+# cat=Templates; type=string; label=Kurs-Template 5
+courserowtemplate5 =
+# cat=Templates; type=string; label=Kurs-Template 6
+courserowtemplate6 =
+# cat=Templates; type=string; label=Kurs-Template 7
+courserowtemplate7 =
+# cat=Templates; type=string; label=Kurs-Template 8
+courserowtemplate8 =
+# cat=Templates; type=string; label=Kurs-Template 9
+courserowtemplate9 =

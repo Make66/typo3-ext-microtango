@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.videoGroup>
+                        <TCEforms>
+                            <label>Video-Gruppe</label>
+                            <description>Geben Sie die anzuzeigende Gruppen an (Leer bedeutet, es werden alle Videos angezeigt). Mehrere Gruppen können durch , getrennt werden.</description>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <itemsProcFunc>DMS\Microtango\Utility\FlexFormUtility->getVideoGroups</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.videoGroup>
+
+                    <settings.templateType>
+                        <TCEforms>
+                            <label>Template</label>
+                            <description>Wählen den Template-Typen aus.</description>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>DMS\Microtango\Utility\FlexFormUtility->getVideoTemplateTypes</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </settings.templateType>
+
+                    <settings.rowTemplate>
+                        <TCEforms>
+                            <label>Zeilen-Template</label>
+                            <description>z.B.: |{{VideoThumbnail}}#Name|{{Name}}#Beschreibung|{{Description}}#Länge|{{Length}}#|{{ShowVideo}}. Hier gibt es die möglichen Werte: https://api.microtango.de/swagger</description>
+                            <config>
+                                <type>input</type>
+                                <size>50</size>
+                            </config>
+                            <displayCond>FIELD:settings.templateType:=:individual</displayCond>
+                        </TCEforms>
+                    </settings.rowTemplate>
+
+                    <settings.templateId>
+                        <TCEforms>
+                            <label>Template-ID</label>
+                            <description>Geben Sie die ID eines Templates an. Enprechende Templates liefert z.B. DMS.</description>
+                            <config>
+                                <type>input</type>
+                            </config>
+                            <displayCond>FIELD:settings.templateType:=:id</displayCond>
+                        </TCEforms>
+                    </settings.templateId>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

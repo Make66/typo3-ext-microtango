@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:section name="HeaderAssets">
+    <script src="https://cdn.microtango.de/scripts/mtrest-3.0.0.min.js"></script>
+</f:section>
+
+<script>
+    MicrotangoCMSHelper.addReservation({
+        "restKey": "<f:format.raw>{backendConfiguration.restkey}</f:format.raw>",
+        "reservationText": "<f:format.raw>{backendConfiguration.reservationtext}</f:format.raw>",
+        "loadCSS": {f:if(condition: '{{backendConfiguration.loadcss} == 1', then: 'true', else: 'false')},
+        "update": [],
+    });
+</script>
+</html>

@@ -1,0 +1,35 @@
+mod.wizards {
+    newContentElement.wizardItems.microtango {
+        header = Microtango
+        elements {
+            microtango_course {
+                title = Kurse
+                description = Microtango Kurse
+                iconIdentifier = microtango-course
+                tt_content_defValues {
+                    CType = list
+                    list_type = microtango_course
+                }
+            }
+            microtango_reservation {
+                title = Reservierung
+                description = Microtango Reservierung
+                iconIdentifier = microtango-reservation
+                tt_content_defValues {
+                    CType = list
+                    list_type = microtango_reservation
+                }
+            }
+            microtango_video {
+                title = Video
+                description = Microtango Video
+                iconIdentifier = microtango-video
+                tt_content_defValues {
+                    CType = list
+                    list_type = microtango_video
+                }
+            }
+        }
+        show = *
+    }
+}
